@@ -1,0 +1,29 @@
+{
+  "name": "b",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm install && nodemon",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/app.js"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@repo/prettier": "workspace:*",
+    "@types/express": "^5.0.3",
+    "@types/express-session": "^1.18.2",
+    "@types/passport": "^1.0.17",
+    "@types/passport-local": "^1.0.38"
+  },
+  "dependencies": {
+    "@quixo3/prisma-session-store": "^3.1.13",
+    "@repo/env": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@repo/validations": "workspace:*",
+    "@repo/trpc": "workspace:*",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}

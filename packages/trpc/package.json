@@ -1,0 +1,31 @@
+{
+  "name": "@repo/trpc",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@repo/prettier": "workspace:*",
+    "@types/node": "^24.3.0"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.5.0",
+    "@repo/validations": "workspace:*",
+    "@repo/db": "workspace:*"
+  }
+}
