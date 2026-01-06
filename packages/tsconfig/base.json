@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "es2022",
-    "module": "node20",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "allowJs": true,
     "moduleDetection": "force",
@@ -13,9 +13,12 @@
     "skipLibCheck": true,
     "noEmit": true,
     "paths": {
+      "@repo/tsconfig/*": ["../../packages/tsconfig/*"],
+      "@repo/twconfig/*": ["../../packages/twconfig/*"],
+      "@repo/prettier/*": ["../../packages/prettier/*"],
       "@/*": ["./src/*"],
-      "@repo/tsconfig": ["../../packages/tsconfig/*"],
-      "@repo/twconfig": ["../../packages/twconfig/*"]
+      "@repo/ui/*": ["../../packages/ui/src/*"],
+      "@repo/utils/*": ["../../packages/utils/src/*"]
     }
   }
 }
