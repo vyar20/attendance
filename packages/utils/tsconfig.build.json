@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/tsconfig/tsconfig.build",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "noEmit": false,
+    "declaration": true,
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

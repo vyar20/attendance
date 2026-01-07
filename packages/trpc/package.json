@@ -1,0 +1,21 @@
+{
+  "name": "@repo/trpc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "lint": "eslint ."
+  },
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "devDependencies": {
+    "@repo/eslint": "workspace:*",
+    "@repo/prettier": "workspace:*",
+    "@repo/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.8.1"
+  }
+}
