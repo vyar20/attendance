@@ -81,8 +81,8 @@ export default function HomeScreen() {
           <ThemedText type='defaultSemiBold'>app</ThemedText> to{' '}
           <ThemedText type='defaultSemiBold'>app-example</ThemedText>.
         </ThemedText>
-        <Text className='text-red-500'>Test</Text>
       </ThemedView>
+        <Text className='text-red-500'>Test</Text>
     </ParallaxScrollView>
   )
 }
