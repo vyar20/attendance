@@ -9,9 +9,6 @@ import { StatusBar } from 'expo-status-bar'
 import 'react-native-reanimated'
 
 import { useColorScheme } from '@/hooks/use-color-scheme'
-import config from '@repo/twconfig/base'
-
-console.log(JSON.stringify(config, null, 2))
 
 export const unstable_settings = {
   anchor: '(tabs)'
