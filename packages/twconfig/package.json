@@ -6,7 +6,5 @@
     "./*": "./*.js",
     "./global.css": "./global.css"
   },
-  "devDependencies": {
-    "tailwindcss": "3.4.17"
-  }
+  "devDependencies": {}
 }

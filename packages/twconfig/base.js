@@ -5,7 +5,7 @@ const path = require('node:path')
  * */
 module.exports = {
   content: [
-    path.resolve(__dirname, '../../ui/src/**/*.{ts,tsx}'),
+    path.resolve(__dirname, '../../packages/ui/src/**/*.{ts,tsx}'),
     path.resolve(__dirname, '../../apps/mobile/src/**/*.{ts,tsx}')
   ],
   presets: [require('nativewind/preset')],

@@ -24,6 +24,9 @@ importers:
       prettier:
         specifier: ^3.7.4
         version: 3.7.4
+      tailwindcss:
+        specifier: 3.4.17
+        version: 3.4.17
       turbo:
         specifier: ^2.7.3
         version: 2.7.3
@@ -214,11 +217,7 @@ importers:
 
   packages/tsconfig: {}
 
-  packages/twconfig:
-    devDependencies:
-      tailwindcss:
-        specifier: 3.4.17
-        version: 3.4.17
+  packages/twconfig: {}
 
   packages/utils:
     devDependencies:
@@ -983,8 +982,8 @@ packages:
       '@babel/helper-plugin-utils': 7.27.1
     dev: false
 
-  /@babel/plugin-transform-optional-chaining@7.27.1(@babel/core@7.28.5):
-    resolution: {integrity: sha512-BQmKPPIuc8EkZgNKsv0X4bPmOoayeu4F1YCwx2/CfmDSXDbp7GnzlUH+/ul5VGfRg1AoFPsrIThlEBj2xb4CAg==}
+  /@babel/plugin-transform-optional-chaining@7.28.5(@babel/core@7.28.5):
+    resolution: {integrity: sha512-N6fut9IZlPnjPwgiQkXNhb+cT8wQKFlJNqcZkWlcTqkcqx6/kU4ynGmLFoa4LViBSirn05YAwk+sQBbPfxtYzQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1216,8 +1215,8 @@ packages:
       - supports-color
     dev: false
 
-  /@babel/preset-typescript@7.27.1(@babel/core@7.28.5):
-    resolution: {integrity: sha512-l7WfQfX0WK4M0v2RudjuQK4u99BS6yLHYEmdtVPP7lKV013zr9DygFuWNlnbvQ9LR+LS0Egz/XAvGx5U9MX0fQ==}
+  /@babel/preset-typescript@7.28.5(@babel/core@7.28.5):
+    resolution: {integrity: sha512-+bQy5WOI2V6LJZpPVxY+yp66XdZ2yifu0Mc1aP5CQKgjn4QM5IN2i5fAZ4xKop47pr8rpVhiAeu+nDQa12C8+g==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2404,7 +2403,7 @@ packages:
       '@babel/plugin-transform-numeric-separator': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-object-rest-spread': 7.28.4(@babel/core@7.28.5)
       '@babel/plugin-transform-optional-catch-binding': 7.27.1(@babel/core@7.28.5)
-      '@babel/plugin-transform-optional-chaining': 7.27.1(@babel/core@7.28.5)
+      '@babel/plugin-transform-optional-chaining': 7.28.5(@babel/core@7.28.5)
       '@babel/plugin-transform-parameters': 7.27.7(@babel/core@7.28.5)
       '@babel/plugin-transform-private-methods': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-private-property-in-object': 7.27.1(@babel/core@7.28.5)
@@ -3534,7 +3533,7 @@ packages:
       '@babel/plugin-transform-private-property-in-object': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-runtime': 7.28.5(@babel/core@7.28.5)
       '@babel/preset-react': 7.28.5(@babel/core@7.28.5)
-      '@babel/preset-typescript': 7.27.1(@babel/core@7.28.5)
+      '@babel/preset-typescript': 7.28.5(@babel/core@7.28.5)
       '@babel/runtime': 7.28.4
       '@react-native/babel-preset': 0.81.5(@babel/core@7.28.5)
       babel-plugin-react-compiler: 1.0.0
@@ -7443,11 +7442,11 @@ packages:
       '@babel/plugin-transform-class-properties': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-classes': 7.28.4(@babel/core@7.28.5)
       '@babel/plugin-transform-nullish-coalescing-operator': 7.27.1(@babel/core@7.28.5)
-      '@babel/plugin-transform-optional-chaining': 7.27.1(@babel/core@7.28.5)
+      '@babel/plugin-transform-optional-chaining': 7.28.5(@babel/core@7.28.5)
       '@babel/plugin-transform-shorthand-properties': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-template-literals': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-unicode-regex': 7.27.1(@babel/core@7.28.5)
-      '@babel/preset-typescript': 7.27.1(@babel/core@7.28.5)
+      '@babel/preset-typescript': 7.28.5(@babel/core@7.28.5)
       convert-source-map: 2.0.0
       react: 19.1.0
       react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0)
