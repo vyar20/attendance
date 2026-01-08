@@ -1,6 +1,6 @@
 export {
-  CreateExpressContextOptions,
-  createExpressMiddleware
+  createExpressMiddleware,
+  type CreateExpressContextOptions
 } from '@trpc/server/adapters/express'
 import { initTRPC } from '@trpc/server'
 

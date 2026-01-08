@@ -1,8 +1,8 @@
-import { env } from '@repo/env/env'
-import { createContext } from '@repo/trpc/context'
-import { appRouter } from '@repo/trpc/routes/_app'
-import { createExpressMiddleware } from '@repo/trpc/trpc'
-import { log } from '@repo/utils/client-utils'
+import { env } from '@repo/env/env.js'
+import { createContext } from '@repo/trpc/context.js'
+import { appRouter } from '@repo/trpc/routes/_app.js'
+import { createExpressMiddleware } from '@repo/trpc/trpc.js'
+import { log } from '@repo/utils/client-utils.js'
 import express from 'express'
 
 const app = express()

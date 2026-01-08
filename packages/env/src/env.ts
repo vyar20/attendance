@@ -1,4 +1,4 @@
-import { log } from '@repo/utils/client-utils'
+import { log } from '@repo/utils/client-utils.js'
 import z from 'zod'
 
 const envSchema = z.object({

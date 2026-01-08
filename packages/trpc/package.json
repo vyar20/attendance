@@ -8,7 +8,9 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./*": "./dist/*.js"
+    "./trpc.js": "./dist/trpc.js",
+    "./context.js": "./dist/context.js",
+    "./routes/_app.js": "./dist/routes/_app.js"
   },
   "devDependencies": {
     "@repo/eslint": "workspace:*",

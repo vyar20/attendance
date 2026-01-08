@@ -8,7 +8,7 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./*": "./dist/*.js"
+    "./client-utils.js": "./dist/client-utils.js"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

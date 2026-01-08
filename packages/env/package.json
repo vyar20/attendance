@@ -8,11 +8,14 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./*": "./dist/*.js"
+    "./env.js": "./dist/env.js"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@repo/eslint": "workspace:*",
     "@repo/prettier": "workspace:*"
+  },
+  "dependencies": {
+    "@repo/utils": "workspace:*"
   }
 }
