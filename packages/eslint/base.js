@@ -25,7 +25,8 @@ module.exports = [
       '@typescript-eslint/consistent-type-imports': [
         'error',
         { fixStyle: 'inline-type-imports', prefer: 'type-imports' }
-      ]
+      ],
+      'react-hooks/exhaustive-deps': 0
     }
   }
 ]

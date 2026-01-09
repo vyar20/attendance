@@ -16,13 +16,17 @@
         "./src/*",
         "../../packages/env/src/*",
         "../../packages/utils/src/*",
-        "../../packages/trpc/src/*"
+        "../../packages/trpc/src/*",
+        "../../packages/context/src/*",
+        "../../packages/ui/src/*"
       ],
       "@repo/prettier/*": ["../../packages/prettier/*"],
       "@repo/tsconfig/*": ["../../packages/tsconfig/*"],
       "@repo/eslint/*": ["../../packages/eslint/*"],
       "@repo/utils/*": ["../../packages/utils/src/*"],
       "@repo/trpc/*": ["../../packages/trpc/src/*"],
+      "@repo/ui/*": ["../../packages/ui/src/*"],
+      "@repo/context/*": ["../../packages/context/src/*"],
       "@repo/env/*": ["../../packages/env/src/*"]
     }
   }

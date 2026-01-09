@@ -1,0 +1,8 @@
+{
+  "extends": "@repo/tsconfig/tsconfig.react",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["nativewind/types"]
+  },
+  "include": ["src"]
+}
