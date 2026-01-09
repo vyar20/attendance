@@ -29,6 +29,7 @@ export const Form = <T extends FieldValues>({
     <View className='w-full'>
       <Input
         {...props}
+        variant={error ? 'error' : props.variant}
         onChangeText={field.onChange}
         value={field.value}
         onBlur={field.onBlur}

@@ -4,8 +4,16 @@ import { type ReactNode } from 'react'
 export const inputStyle = cva(
   'border border-border w-full rounded-md relative flex-col',
   {
-    variants: {},
-    defaultVariants: {}
+    variants: {
+      variant: {
+        primary: 'border-primary',
+        secondary: 'border-secondary',
+        error: '!border-error'
+      }
+    },
+    defaultVariants: {
+      variant: 'primary'
+    }
   }
 )
 

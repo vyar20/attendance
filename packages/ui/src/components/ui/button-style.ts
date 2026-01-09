@@ -8,7 +8,8 @@ export const buttonStyle = cva(
       variant: {
         primary: 'bg-primary disabled:bg-primary/50',
         secondary: 'bg-secondary disabled:bg-secondary/50',
-        error: 'bg-error disabled:bg-error/50'
+        error: 'bg-error disabled:bg-error/50',
+        outline: 'active:bg-border/50 border border-border'
       },
       roundedFull: {
         true: 'rounded-full'

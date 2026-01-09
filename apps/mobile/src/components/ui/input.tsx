@@ -19,6 +19,7 @@ import { Text } from './text'
 export const Input: FC<InputProps<TextInputProps>> = ({
   className,
   label,
+  variant,
   ...props
 }) => {
   const { toggle: focus, onToggle: focusToggle } = useToggle()
@@ -56,12 +57,17 @@ export const Input: FC<InputProps<TextInputProps>> = ({
   }, [focus])
 
   return (
-    <View className={cn(inputStyle({ className }), focus && 'border-primary')}>
+    <View
+      className={cn(
+        !focus && '!border-border',
+        inputStyle({ variant, className })
+      )}
+    >
       <Animated.View
         className='absolute top-4 z-10 ml-2 bg-background px-2'
         style={labelStyle}
       >
-        <Text variant='h4' semiBold>
+        <Text variant='h4' semiBold error={variant === 'error'}>
           {label}
         </Text>
       </Animated.View>

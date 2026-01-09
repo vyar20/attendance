@@ -8,7 +8,8 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./sign-in-validation.js": "./dist/sign-in-validation.js"
+    "./sign-in-validation.js": "./dist/sign-in-validation.js",
+    "./sign-up-validation.js": "./dist/sign-up-validation.js"
   },
   "devDependencies": {
     "@repo/eslint": "workspace:*",
