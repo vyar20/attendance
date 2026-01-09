@@ -1,10 +1,8 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "@repo/tsconfig/tsconfig.react",
   "compilerOptions": {
     "strict": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "."
   },
   "include": [
     "**/*.ts",

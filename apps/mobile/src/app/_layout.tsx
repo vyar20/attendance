@@ -1,32 +1,53 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider
-} from '@react-navigation/native'
+import { type ThemeContext } from '@/theme-context'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { ThemeProvider as RNThemeProvider } from '@react-navigation/native'
 import '@repo/twconfig/global.css'
+import { NAV_THEME, themes } from '@repo/ui/lib/theme'
+import { ThemeProvider } from '@repo/ui/theme-provider'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
+import { useColorScheme } from 'nativewind'
+import { useEffect } from 'react'
+import { View } from 'react-native'
 import 'react-native-reanimated'
 
-import { useColorScheme } from '@/hooks/use-color-scheme'
-
-export const unstable_settings = {
-  anchor: '(tabs)'
-}
-
 export default function RootLayout() {
-  const colorScheme = useColorScheme()
+  const { colorScheme, setColorScheme } = useColorScheme()
+
+  const getSavedTheme = async () => {
+    const savedTheme = await AsyncStorage.getItem('theme')
+
+    if (savedTheme) setColorScheme(savedTheme as ThemeContext['theme'])
+  }
+
+  useEffect(() => {
+    AsyncStorage.setItem('theme', colorScheme!)
+  }, [colorScheme])
+
+  useEffect(() => {
+    getSavedTheme()
+  }, [])
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-        <Stack.Screen
-          name='modal'
-          options={{ presentation: 'modal', title: 'Modal' }}
-        />
-      </Stack>
-      <StatusBar style='auto' />
+    <ThemeProvider onThemeChange={setColorScheme}>
+      <RNThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
+        <View
+          className='flex-1 bg-background'
+          style={themes[colorScheme ?? 'light']}
+        >
+          <Stack
+            screenOptions={{
+              headerShown: true,
+              contentStyle: {
+                backgroundColor: 'transparent'
+              }
+            }}
+          >
+            <Stack.Screen name='index' />
+          </Stack>
+          <StatusBar style='auto' />
+        </View>
+      </RNThemeProvider>
     </ThemeProvider>
   )
 }
