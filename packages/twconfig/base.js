@@ -2,7 +2,10 @@
  * @type {import('tailwindcss').Config}
  * */
 module.exports = {
-  content: ['../../apps/mobile/src/**/*.tsx'],
+  content: [
+    '../../apps/mobile/src/**/*.tsx',
+    '../../packages/ui/src/**/*.{ts,tsx}'
+  ],
   darkMode: 'class',
   presets: [require('nativewind/preset')],
   theme: {
@@ -10,6 +13,7 @@ module.exports = {
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',
         primary: 'rgb(var(--primary) / <alpha-value>)',
+        secondary: 'rgb(var(--secondary) / <alpha-value>)',
         border: 'rgb(var(--border) / <alpha-value>)',
         card: 'rgb(var(--card) / <alpha-value>)',
         notification: 'rgb(var(--notification) / <alpha-value>)',

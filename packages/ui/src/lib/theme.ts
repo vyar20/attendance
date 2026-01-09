@@ -13,10 +13,11 @@ const convertToTWFormat = (color: string) => {
   return c
 }
 
-const theme = {
+export const theme = {
   light: {
     background: hexToRgba(colors.slate[200]),
     primary: hexToRgba(colors.indigo[500]),
+    secondary: hexToRgba(colors.rose[500]),
     border: hexToRgba(colors.slate[400]),
     card: hexToRgba(colors.slate[200]),
     notification: hexToRgba(colors.slate[200]),
@@ -25,6 +26,7 @@ const theme = {
   dark: {
     background: hexToRgba(colors.slate[800]),
     primary: hexToRgba(colors.indigo[500]),
+    secondary: hexToRgba(colors.rose[500]),
     border: hexToRgba(colors.slate[600]),
     card: hexToRgba(colors.slate[800]),
     notification: hexToRgba(colors.slate[800]),

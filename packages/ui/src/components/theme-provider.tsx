@@ -4,15 +4,22 @@ import { type FC, type ReactNode, useEffect, useState } from 'react'
 type ThemeProviderProps = {
   children?: ReactNode
   onThemeChange?: (theme: ThemeContext['theme']) => void
+  defaultTheme?: ThemeContext['theme']
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({
   children,
-  onThemeChange
+  onThemeChange,
+  defaultTheme
 }) => {
-  const [theme, setTheme] = useState<ThemeContext['theme']>('light')
+  const [theme, setTheme] = useState<ThemeContext['theme']>(
+    defaultTheme ?? 'light'
+  )
 
-  const setThemeHandler = (theme: ThemeContext['theme']) => setTheme(theme)
+  const setThemeHandler = (theme: ThemeContext['theme']) => {
+    setTheme(theme)
+    console.log({ theme })
+  }
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
   useEffect(() => {

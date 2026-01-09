@@ -1,21 +1,21 @@
-import { Text } from '@/components/text'
-import { useColorScheme } from 'nativewind'
+import { Button } from '@/components/ui/button'
+import { Icon } from '@/components/ui/icon'
+import { useTheme } from '@/use-theme'
 import type { FC, ReactNode } from 'react'
-import { Button, View } from 'react-native'
+import { View } from 'react-native'
 
 type IndexProps = {
   children?: ReactNode
 }
 
 const Index: FC<IndexProps> = () => {
-  const { colorScheme, toggleColorScheme } = useColorScheme()
+  const { toggleTheme } = useTheme()
 
   return (
     <View className='flex-1'>
-      <Text className='text-foreground/50'>{colorScheme}</Text>
-      <Text className='text-foreground'>{colorScheme}</Text>
-
-      <Button title='Change Theme' onPress={toggleColorScheme} />
+      <Button onPress={toggleTheme} end={<Icon name='LogIn' />}>
+        Change Theme
+      </Button>
     </View>
   )
 }
