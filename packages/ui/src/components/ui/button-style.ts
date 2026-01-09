@@ -2,12 +2,16 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { type ReactNode } from 'react'
 
 export const buttonStyle = cva(
-  'px-8 py-6 items-center flex-row gap-4 justify-center',
+  'px-6 py-4 items-center flex-row gap-4 rounded-md justify-center disabled:scale-90',
   {
     variants: {
       variant: {
-        primary: 'bg-primary',
-        secondary: 'bg-secondary'
+        primary: 'bg-primary disabled:bg-primary/50',
+        secondary: 'bg-secondary disabled:bg-secondary/50',
+        error: 'bg-error disabled:bg-error/50'
+      },
+      roundedFull: {
+        true: 'rounded-full'
       }
     },
     defaultVariants: {
@@ -20,5 +24,6 @@ export type ButtonProps<T> = {
   children?: ReactNode
   start?: ReactNode
   end?: ReactNode
+  isPending?: boolean
 } & VariantProps<typeof buttonStyle> &
   T

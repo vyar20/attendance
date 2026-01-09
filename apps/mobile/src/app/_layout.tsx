@@ -12,7 +12,11 @@ import { useEffect } from 'react'
 import { View } from 'react-native'
 import 'react-native-reanimated'
 
-export default function RootLayout() {
+export const unstable_settings = {
+  initialRouteName: 'auth/sign-in'
+}
+
+const RootLayout = () => {
   const { colorScheme, setColorScheme } = useColorScheme()
   const { setThemeHandler } = useTheme()
 
@@ -20,8 +24,6 @@ export default function RootLayout() {
     const savedTheme = (await AsyncStorage.getItem(
       'theme'
     )) as ThemeContext['theme']
-
-    console.log(savedTheme)
 
     if (savedTheme) {
       setColorScheme(savedTheme)
@@ -41,12 +43,8 @@ export default function RootLayout() {
     <ThemeProvider onThemeChange={setColorScheme} defaultTheme={colorScheme}>
       <RNThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
         <View className='flex-1' style={themes[colorScheme ?? 'light']}>
-          <Stack
-            screenOptions={{
-              headerShown: true
-            }}
-          >
-            <Stack.Screen name='index' />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name='auth/sign-in' />
           </Stack>
           <StatusBar style='auto' />
         </View>
@@ -54,3 +52,5 @@ export default function RootLayout() {
     </ThemeProvider>
   )
 }
+
+export default RootLayout

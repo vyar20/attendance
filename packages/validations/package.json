@@ -1,5 +1,5 @@
 {
-  "name": "@repo/context",
+  "name": "@repo/validations",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -8,9 +8,7 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./theme-context.js": "./dist/theme-context.js",
-    "./use-theme.js": "./dist/use-theme.js",
-    "./use-toggle.js": "./dist/use-toggle.js"
+    "./sign-in-validation.js": "./dist/sign-in-validation.js"
   },
   "devDependencies": {
     "@repo/eslint": "workspace:*",

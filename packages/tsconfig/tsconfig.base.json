@@ -18,6 +18,7 @@
         "../../packages/utils/src/*",
         "../../packages/trpc/src/*",
         "../../packages/context/src/*",
+        "../../packages/validations/src/*",
         "../../packages/ui/src/*"
       ],
       "@repo/prettier/*": ["../../packages/prettier/*"],
@@ -27,6 +28,7 @@
       "@repo/trpc/*": ["../../packages/trpc/src/*"],
       "@repo/ui/*": ["../../packages/ui/src/*"],
       "@repo/context/*": ["../../packages/context/src/*"],
+      "@repo/validations/*": ["../../packages/validations/src/*"],
       "@repo/env/*": ["../../packages/env/src/*"]
     }
   }

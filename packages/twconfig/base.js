@@ -14,6 +14,7 @@ module.exports = {
         background: 'rgb(var(--background) / <alpha-value>)',
         primary: 'rgb(var(--primary) / <alpha-value>)',
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
+        error: 'rgb(var(--error) / <alpha-value>)',
         border: 'rgb(var(--border) / <alpha-value>)',
         card: 'rgb(var(--card) / <alpha-value>)',
         notification: 'rgb(var(--notification) / <alpha-value>)',

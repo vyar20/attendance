@@ -18,7 +18,9 @@ export const theme = {
     background: hexToRgba(colors.slate[200]),
     primary: hexToRgba(colors.indigo[500]),
     secondary: hexToRgba(colors.rose[500]),
+    error: hexToRgba(colors.red[600]),
     border: hexToRgba(colors.slate[400]),
+    borderForeground: hexToRgba(colors.indigo[500]),
     card: hexToRgba(colors.slate[200]),
     notification: hexToRgba(colors.slate[200]),
     text: hexToRgba(colors.slate[800])
@@ -27,7 +29,9 @@ export const theme = {
     background: hexToRgba(colors.slate[800]),
     primary: hexToRgba(colors.indigo[500]),
     secondary: hexToRgba(colors.rose[500]),
+    error: hexToRgba(colors.red[600]),
     border: hexToRgba(colors.slate[600]),
+    borderForeground: hexToRgba(colors.indigo[500]),
     card: hexToRgba(colors.slate[800]),
     notification: hexToRgba(colors.slate[800]),
     text: hexToRgba(colors.slate[200])
@@ -38,6 +42,8 @@ export const themes = {
   light: vars({
     '--background': convertToTWFormat(theme.light.background),
     '--primary': convertToTWFormat(theme.light.primary),
+    '--secondary': convertToTWFormat(theme.light.secondary),
+    '--error': convertToTWFormat(theme.light.error),
     '--border': convertToTWFormat(theme.light.border),
     '--card': convertToTWFormat(theme.light.card),
     '--notification': convertToTWFormat(theme.light.notification),
@@ -46,6 +52,8 @@ export const themes = {
   dark: vars({
     '--background': convertToTWFormat(theme.dark.background),
     '--primary': convertToTWFormat(theme.dark.primary),
+    '--secondary': convertToTWFormat(theme.dark.secondary),
+    '--error': convertToTWFormat(theme.dark.error),
     '--border': convertToTWFormat(theme.dark.border),
     '--card': convertToTWFormat(theme.dark.card),
     '--notification': convertToTWFormat(theme.dark.notification),

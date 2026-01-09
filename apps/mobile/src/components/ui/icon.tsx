@@ -16,8 +16,6 @@ export const Icon: FC<IconProps> = ({ name, color, size }) => {
   const iconColor =
     color ?? (themeColor === 'dark' ? theme.dark.text : theme.light.text)
 
-  console.log({ iconColor, themeColor })
-
   return (
     <LucideIcon color={iconColor} size={size} className='!text-foreground' />
   )

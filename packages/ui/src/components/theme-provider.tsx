@@ -16,10 +16,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
     defaultTheme ?? 'light'
   )
 
-  const setThemeHandler = (theme: ThemeContext['theme']) => {
-    setTheme(theme)
-    console.log({ theme })
-  }
+  const setThemeHandler = (theme: ThemeContext['theme']) => setTheme(theme)
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
   useEffect(() => {
