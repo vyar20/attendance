@@ -4,6 +4,7 @@ import { useTheme } from '@/use-theme'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ThemeProvider as RNThemeProvider } from '@react-navigation/native'
 import '@repo/twconfig/global.css'
+import { TrpcProvider } from '@repo/ui/components/trpc-provider'
 import { NAV_THEME, themes } from '@repo/ui/lib/theme'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
@@ -40,16 +41,18 @@ const RootLayout = () => {
   }, [])
 
   return (
-    <ThemeProvider onThemeChange={setColorScheme} defaultTheme={colorScheme}>
-      <RNThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
-        <View className='flex-1' style={themes[colorScheme ?? 'light']}>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name='auth/sign-in' />
-          </Stack>
-          <StatusBar style='auto' />
-        </View>
-      </RNThemeProvider>
-    </ThemeProvider>
+    <TrpcProvider>
+      <ThemeProvider onThemeChange={setColorScheme} defaultTheme={colorScheme}>
+        <RNThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
+          <View className='flex-1' style={themes[colorScheme ?? 'light']}>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name='auth/sign-in' />
+            </Stack>
+            <StatusBar style='auto' />
+          </View>
+        </RNThemeProvider>
+      </ThemeProvider>
+    </TrpcProvider>
   )
 }
 

@@ -6,7 +6,7 @@ type IndexProps = {
 }
 
 const Index: FC<IndexProps> = () => {
-  return <Redirect href='/auth/sign-in' />
+  return <Redirect href='/auth/sign-up' />
 }
 
 export default Index

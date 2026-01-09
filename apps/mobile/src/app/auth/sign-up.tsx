@@ -5,11 +5,13 @@ import { Divider } from '@/components/ui/divider'
 import { Form } from '@/components/ui/form'
 import { Icon } from '@/components/ui/icon'
 import { Text } from '@/components/ui/text'
+import { api } from '@/lib/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
   signUpValidation,
   type SignUpValidation
 } from '@repo/validations/sign-up-validation'
+import { useMutation } from '@tanstack/react-query'
 import { Link } from 'expo-router'
 import { type FC, type ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
@@ -20,6 +22,7 @@ type SignUpProps = {
 }
 
 const SignUp: FC<SignUpProps> = () => {
+  const { mutate, isPending } = useMutation(api.auth.signUp.mutationOptions())
   const { control, handleSubmit } = useForm<SignUpValidation>({
     resolver: zodResolver(signUpValidation),
     defaultValues: {
@@ -29,9 +32,7 @@ const SignUp: FC<SignUpProps> = () => {
     }
   })
 
-  const onSubmitHandler = (input: SignUpValidation) => {
-    console.log(input)
-  }
+  const onSubmitHandler = (input: SignUpValidation) => mutate(input)
 
   return (
     <View className='flex-1'>
@@ -55,6 +56,7 @@ const SignUp: FC<SignUpProps> = () => {
         />
 
         <Button
+          isPending={isPending}
           end={<Icon name='LogIn' />}
           onPress={handleSubmit(onSubmitHandler)}
         >

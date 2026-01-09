@@ -4,6 +4,7 @@ import { appRouter } from '@repo/trpc/routes/_app.js'
 import { createExpressMiddleware } from '@repo/trpc/trpc.js'
 import { log } from '@repo/utils/client-utils.js'
 import express from 'express'
+import { connectMongo } from './db/connect-mongo.js'
 
 const app = express()
 
@@ -18,4 +19,6 @@ app.use(
   })
 )
 
-app.listen(env.PORT, () => log.success(`Server running on port ${env.PORT}`))
+connectMongo().then(() =>
+  app.listen(env.PORT, () => log.success(`Server running on port ${env.PORT}`))
+)

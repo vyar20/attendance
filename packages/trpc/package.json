@@ -18,6 +18,8 @@
     "@repo/tsconfig": "workspace:*"
   },
   "dependencies": {
+    "@repo/utils": "workspace:*",
+    "@repo/validations": "workspace:*",
     "@trpc/server": "^11.8.1"
   }
 }

@@ -3,7 +3,8 @@ import z from 'zod'
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production']),
-  PORT: z.coerce.number()
+  PORT: z.coerce.number(),
+  DATABASE_URL: z.url({ error: 'Invalid DATABASE_URL' })
 })
 
 type ENVSchema = z.infer<typeof envSchema>

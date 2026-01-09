@@ -14,3 +14,9 @@ export const log = {
 }
 
 export const cn = (...classes: ClassValue[]) => twMerge(clsx(classes))
+
+export const p = <T>(promise: Promise<T>): Promise<[null, T] | [Error]> =>
+  promise.then((data) => [null, data] as [null, T]).catch((err) => [err])
+
+export const delay = (timeout: number = 1000) =>
+  new Promise((resolve) => setTimeout(resolve, timeout))

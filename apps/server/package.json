@@ -16,9 +16,10 @@
     "@types/express": "^5.0.6"
   },
   "dependencies": {
-    "@repo/utils": "workspace:*",
-    "@repo/trpc": "workspace:*",
     "@repo/env": "workspace:*",
-    "express": "^5.2.1"
+    "@repo/trpc": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2"
   }
 }

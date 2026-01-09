@@ -6,10 +6,13 @@ import { Form } from '@/components/ui/form'
 import { Icon } from '@/components/ui/icon'
 import { Text } from '@/components/ui/text'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { api } from '@repo/ui/lib/api'
+import {} from '@repo/utils/client-utils'
 import {
   signInValidation,
   type SignInValidation
 } from '@repo/validations/sign-in-validation'
+import { useMutation, useQuery } from '@tanstack/react-query'
 import { Link } from 'expo-router'
 import { useEffect, type FC, type ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
@@ -26,6 +29,15 @@ type SignInProps = {
 }
 
 const SignIn: FC<SignInProps> = () => {
+  const { data } = useQuery(api.hello.queryOptions())
+  const {
+    mutate,
+    isPending,
+    data: result
+  } = useMutation(api.auth.signIn.mutationOptions())
+
+  console.log(result, data)
+
   const waveSv = useSharedValue(-15)
 
   const waveStyle = useAnimatedStyle(() => ({
@@ -47,6 +59,8 @@ const SignIn: FC<SignInProps> = () => {
 
   const onSubmitHandler = (input: SignInValidation) => {
     console.log(input)
+
+    mutate(input)
   }
 
   useEffect(() => {
@@ -78,6 +92,7 @@ const SignIn: FC<SignInProps> = () => {
         />
 
         <Button
+          isPending={isPending}
           end={<Icon name='LogIn' />}
           onPress={handleSubmit(onSubmitHandler)}
         >

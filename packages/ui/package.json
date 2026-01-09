@@ -8,8 +8,14 @@
     "lint": "eslint ."
   },
   "exports": {
-    "./text/text-style.js": "./dist/text/text-style.js",
-    "./theme-provider.js": "./dist/theme-provider.js"
+    "./components/ui/text-style.js": "./dist/components/ui/text-style.js",
+    "./components/ui/button-style.js": "./dist/components/ui/button-style.js",
+    "./components/ui/divider-style.js": "./dist/components/ui/divider-style.js",
+    "./components/ui/input-style.js": "./dist/components/ui/input-style.js",
+    "./components/theme-provider.js": "./dist/components/theme-provider.js",
+    "./components/trpc-provider.js": "./dist/components/trpc-provider.js",
+    "./lib/api.js": "./dist/lib/api.js",
+    "./lib/theme.js": "./dist/lib/theme.js"
   },
   "devDependencies": {
     "@repo/eslint": "workspace:*",
